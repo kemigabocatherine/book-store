@@ -5,6 +5,7 @@ This app allows a user to add and store a new book, delete, edit and keep track 
 ## Built With
 
 - React
+- Redux
 - CSS
 - Webpack
 
@@ -20,7 +21,6 @@ To get a local copy up and running follow these simple example steps.
 - Enter git clone git@github.com:kemigabocatherine/book-store.git
 - cd to the repo.
 - Open the project and use it as desired
-- **PS:** Use webpack to run and build project both locally and on the browser.
 
 ## Author
 
