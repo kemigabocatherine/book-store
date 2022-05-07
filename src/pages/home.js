@@ -5,6 +5,7 @@ import BookList from '../components/BookList';
 const Books = () => (
   <div className="homearea">
     <BookList />
+    <div className="line" />
     <AddBook />
   </div>
 );

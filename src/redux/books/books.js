@@ -4,6 +4,15 @@ const ADD_BOOK = 'book-store/books/ADD_BOOK';
 const GET_BOOKS = 'book-store/books/GET_BOOKS';
 const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
 
+const sortByTitle = (a, b) => {
+  if (a.title.toLowerCase() > b.title.toLowerCase()) {
+    return 1;
+  }
+  return -1;
+};
+
+const sortedBooks = (books) => books.sort(sortByTitle);
+
 const addBook = (payload) => async (dispatch) => {
   await createBook(payload);
   dispatch({
@@ -22,7 +31,7 @@ const getBooks = () => async (dispatch) => {
   }));
   dispatch({
     type: GET_BOOKS,
-    payload: books,
+    payload: sortedBooks(books),
   });
 };
 
@@ -42,7 +51,7 @@ const bookReducer = (state = initialState, action) => {
     case GET_BOOKS:
       return action.payload;
     case ADD_BOOK:
-      return books;
+      return sortedBooks(books);
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload);
     default:
