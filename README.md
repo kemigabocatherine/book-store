@@ -7,7 +7,9 @@ This app allows a user to add and store a new book, delete, edit and keep track 
 - React
 - Redux
 - CSS
+- SCSS
 - Webpack
+- API
 
 ## Live Demo
 

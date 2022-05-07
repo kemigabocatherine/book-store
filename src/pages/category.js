@@ -13,8 +13,8 @@ const Category = () => {
   return (
     <div>
       <br />
-      <h2>{category}</h2>
-      <button type="button" onClick={handleClick}>Check Status</button>
+      <h2 className="category-heading">{category}</h2>
+      <button type="button" onClick={handleClick} className="statusbtn align">Check Status</button>
     </div>
   );
 };
