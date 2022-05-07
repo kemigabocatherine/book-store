@@ -198,7 +198,7 @@ form {
   display: flex;
 }
 
-input[type = text] {
+input[type=text] {
   width: 26.6rem;
   height: 2.813rem;
   background-color: #fff;
@@ -214,16 +214,13 @@ input[type = text] {
 .statusbtn {
   background-color: $azure;
   color: #fff;
-  font-weight: 300;
   font-size: 0.913rem;
   border: none;
   border-radius: 3px;
   text-align: center;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
-  font-size: 0.813rem;
   font-weight: bold;
   font-family: $roboto;
-  text-align: center;
   height: 2.813rem;
   width: 11.5rem;
 }
