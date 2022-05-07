@@ -26,10 +26,6 @@ body {
   font-family: $montserrat;
 }
 
-.App {
-  text-align: center;
-}
-
 button {
   font-family: $roboto;
 }
@@ -41,10 +37,17 @@ header {
 
 .navbar {
   height: 5.938rem;
-  display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 2.313rem;
+}
+
+.d-flex {
+ display: flex;
+}
+
+.align {
+  text-align: center;
 }
 
 .nav-title {
@@ -68,25 +71,107 @@ header {
 }
 
 .oval {
+  align-items: center;
+  justify-content: center;
   width: 2.813rem;
   height: 2.813rem;
-  padding: 0.875rem 0.9rem 0.875rem 0.875rem;
+  padding: 0.875rem 1rem 0.875rem 0.875rem;
   border: 1px solid $greyBorder;
-  border-radius: 2rem;
+  border-radius: 75px;
   margin-left: 20.5rem;
 }
 
 .mask {
-  text-align: center;
-  width: 1.363rem;
-  height: 1.363rem;
+  width: 1.063rem;
+  height: 1.063rem;
   color: $azure;
   margin-right: 0.9rem;
 }
 
+.circle-wrap {
+  margin: 5px 0;
+  width: 150px;
+  height: 150px;
+  background: #fafafa;
+  border-radius: 50%;
+  border: 1px solid #fafafa;
+  transform: scale(0.6);
+}
+
+.mask .fill {
+  clip: rect(0, 76px, 150px, 0);
+  background-color: #227ded;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0, 150px, 150px, 75px);
+}
+
+.circle-wrap .inside-circle {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 120px;
+  margin-top: 14px;
+  margin-left: 14px;
+  color: #1e51dc;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.middleSide {
+  justify-content: center;
+  align-items: center;
+}
+
+.percentageText {
+  text-align: left;
+  flex-direction: column;
+}
+
+.percentage {
+  width: 4.25rem;
+  height: 2.438rem;
+  font-family: $montserrat;
+  font-size: 2rem;
+  color: #121212;
+  margin-bottom: 0;
+}
+
+.completedP {
+  font-family: $montserrat;
+  font-size: 0.985rem;
+  color: $warmGrey;
+  margin-bottom: 2rem;
+  margin-top: -0.2rem;
+}
+
+.line2 {
+  width: 0.125rem;
+  height: 5rem;
+  border: 1px solid $greyBorder;
+  margin: 2.5rem 0 1.813rem 0;
+}
+
 //BOOKITEM
 .bookItem {
-  display: flex;
   background-color: #fff;
   height: 10.625rem;
   border: 1px solid $greyBorder;
@@ -161,7 +246,6 @@ header {
   font-size: 0.913rem;
   border: none;
   border-radius: 3px;
-  text-align: center;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
 }
 
@@ -179,7 +263,6 @@ div .line {
 }
 
 .adding {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 6.25rem;
@@ -195,7 +278,7 @@ div .line {
 }
 
 form {
-  display: flex;
+  padding-bottom: 15rem;
 }
 
 input[type=text] {
@@ -204,10 +287,14 @@ input[type=text] {
   background-color: #fff;
   border-radius: 4px;
   border: 1px solid $greyBorder;
-  color: $paleGrey;
+  color: #000;
   font-size: 1rem;
   padding-left: 1rem;
   margin-right: 2.125rem;
+}
+
+::placeholder {
+  color: $pinkishGrey;
 }
 
 .addbtn,
@@ -217,7 +304,6 @@ input[type=text] {
   font-size: 0.913rem;
   border: none;
   border-radius: 3px;
-  text-align: center;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   font-weight: bold;
   font-family: $roboto;

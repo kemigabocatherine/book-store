@@ -6,7 +6,7 @@ import Category from './pages/category';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App align">
       <Navbar />
       <Routes>
         <Route path="/" element={<Books />} />

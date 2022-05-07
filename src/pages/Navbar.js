@@ -3,7 +3,7 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 
 const Navbar = () => (
-  <header className="navbar">
+  <header className="navbar d-flex">
     <div>
       <h1 className="nav-title">BookStore CMS</h1>
     </div>
@@ -12,7 +12,7 @@ const Navbar = () => (
       <a className="categories" href="/Category">CATEGORIES</a>
     </div>
     <div className="oval">
-      <Icon icon="bi:person-fill" className="mask" />
+      <Icon icon="bi:person-fill" className="mask align" />
     </div>
   </header>
 );

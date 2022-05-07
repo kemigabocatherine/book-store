@@ -14,7 +14,7 @@ const Category = () => {
     <div>
       <br />
       <h2 className="category-heading">{category}</h2>
-      <button type="button" onClick={handleClick} className="statusbtn">Check Status</button>
+      <button type="button" onClick={handleClick} className="statusbtn align">Check Status</button>
     </div>
   );
 };
